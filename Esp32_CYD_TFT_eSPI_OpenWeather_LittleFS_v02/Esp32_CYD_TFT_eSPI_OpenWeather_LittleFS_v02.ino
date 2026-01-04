@@ -239,16 +239,8 @@ void setup() {
 **                          Loop
 ***************************************************************************************/
 void loop() {
-
-  // Check if we should update weather information
-  if (booted || (millis() - lastDownloadUpdate > 1000UL * UPDATE_INTERVAL_SECS)) {
-    updateData();
-    lastDownloadUpdate = millis();
-  }
-
-  // If minute has changed then request new time from NTP server
+  // 1. UPDATE TIME FIRST - This makes the clock feel instant
   if (booted || minute() != lastMinute) {
-    // Update displayed time first as we may have to wait for a response
     drawTime();
     lastMinute = minute();
 
@@ -258,6 +250,17 @@ void loop() {
 #ifdef SCREEN_SERVER
     screenServer();
 #endif
+  }
+
+  // 2. UPDATE WEATHER SECOND - The clock is already fresh, so the delay here is okay
+  if (booted || (millis() - lastDownloadUpdate > 1000UL * UPDATE_INTERVAL_SECS)) {
+    updateData();
+    
+    // We draw time again here because updateData() might have taken 3-5 seconds,
+    // and we want to ensure the seconds/minutes are perfectly aligned after the fetch.
+    drawTime(); 
+    
+    lastDownloadUpdate = millis();
   }
 
   booted = false;
