@@ -1,4 +1,5 @@
 # ESP32 Cheap Yellow Display (CYD) Weather Station with 3 days Forecast
+# UPDATED VERSION THAT USES OPEN METEO INSTEAD OF OPENWEATHER MAP (No Subscription required!)
 
 This is the accompanying repository for my article "Create an Internet Weather Station with 3 days Forecast on an ESP32 Cheap Yellow Display ("CYD")" available here: https://medium.com/@androidcrypto/create-an-internet-weather-station-with-3-days-forecast-on-an-esp32-cheap-yellow-display-cyd-15eb5c353b1d
 
