@@ -18,8 +18,6 @@
 //////////////////////////////
 // Settings defined below
 
-#define WIFI_SSID      "wifi"
-#define WIFI_PASSWORD  "wifipassword"
 
 //#define TIMEZONE UK // See NTP_Time.h tab for other "Zone references", UK, usMT etc
 #define TIMEZONE saNorthWest
