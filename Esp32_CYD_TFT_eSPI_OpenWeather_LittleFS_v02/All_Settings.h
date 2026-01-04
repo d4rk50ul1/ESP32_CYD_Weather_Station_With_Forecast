@@ -18,11 +18,11 @@
 //////////////////////////////
 // Settings defined below
 
-#define WIFI_SSID      "-your-router-name-"
-#define WIFI_PASSWORD  "-your-router-password-"
+#define WIFI_SSID      "wifi"
+#define WIFI_PASSWORD  "wifipassword"
 
 //#define TIMEZONE UK // See NTP_Time.h tab for other "Zone references", UK, usMT etc
-#define TIMEZONE euCET
+#define TIMEZONE saNorthWest
 
 // Update every 15 minutes, up to 1000 request per day are free (viz average of ~40 per hour)
 const int UPDATE_INTERVAL_SECS = 15UL * 60UL;  // 15 minutes
@@ -38,10 +38,10 @@ const String api_key = "-your-openweathermap.org api key-";
 
 // Set the forecast longitude and latitude to at least 4 decimal places
 
-// New York, Empire State Building
+// Medellin,Colombia
 // 40.749778527083656, -73.98629815117553
-const String latitude =  "40.749778527083656"; // 90.0000 to -90.0000 negative for Southern hemisphere
-const String longitude = "-73.98629815117553"; // 180.000 to -180.000 negative for West
+const String latitude =  "6.230833"; // 90.0000 to -90.0000 negative for Southern hemisphere
+const String longitude = "-75.590553"; // 180.000 to -180.000 negative for West
 
 // For language codes see https://openweathermap.org/current#multi
 const String language = "en";  // Default language = en = English

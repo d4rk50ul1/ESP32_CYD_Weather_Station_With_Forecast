@@ -86,6 +86,13 @@ TimeChangeRule usPDT = {"PDT", Second, dowSunday, Mar, 2, -420};
 TimeChangeRule usPST = {"PST", First, dowSunday, Nov, 2, -480};
 Timezone usPT(usPDT, usPST);
 
+// Bogotá, Lima, Quito: UTC -5 hours (300 minutes) year-round.
+// We set both "Summer" and "Standard" to -300 because there is no DST.
+TimeChangeRule saStandard = {"COT", First, Sun, Jan, 0, -300}; 
+
+// Define the Timezone object
+Timezone saNorthWest(saStandard, saStandard);
+
 
 //====================================================================================
 //                                  Variables
